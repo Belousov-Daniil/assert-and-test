@@ -26,8 +26,8 @@ import {
  * 
  * Constructor accepts an array of {@link Assertion}.
  */
-export class AssertionPipeline<T extends any> {
-    public constructor(private readonly assertions: Assertion<T>[]) {};
+export class AssertionPipeline {
+    public constructor(private readonly assertions: Assertion<any>[]) {};
 
     /**
      * Local logger which is passed to assertion
