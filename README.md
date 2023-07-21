@@ -1,9 +1,9 @@
-### Testing library
+### Assertion pipe testing library
 
-*Bare minimum, just all you need*
+*Bare minimum, just all you needs*
 
-Library provide ability to create assertion pipelines and controller it via events.
-It provides two main entities:
+This small library provides an ability to create assertion pipelines and control it's flow via events callbacks.
+Library contains two main entities:
 
 ```ts
 class Assertion
@@ -12,7 +12,9 @@ class Assertion
 class AssertionPipeline
 ```
 
-`Assertions` - is a test statements, which can test logic within itself, and `AssertionPipeline `- a big handler, for assertions.
+`Assertion` - is a test statements, which can just assums, are provided assertion works as expected or return a proper value, etc. `AssertionPipeline` - your handler for create automated, and even looped testing, which provides you a controller on every potentially useful event.
+
+With `AssertionPipeline` your testing flow becomes controlled with and within events. Why this library event exists and why is that in such way? Each test is thought as just part/shard of a testing processs, now you don't mind about tests as a separate modules, now you look at them at globally like the proccess of testing.
 
 ### How it works?
 
@@ -41,4 +43,4 @@ pipeline.run();
 Pipeline, as an Assertion, are async, so it's can also be used as a api testing framework.
 Pipeline provides all neccessary events that can be managed by user.
 
-Api docs will be added later, support for UI wrapped is currently in development
+Api docs will be added later, support for UI wrapper is currently in development
